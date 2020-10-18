@@ -262,6 +262,7 @@ li {
 }
 
 #works .card-wrapper {
+  text-align:center;
   padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,6 +339,7 @@ li {
 }
 
 #skill .rate {
+  text-align:center;
   font-size: 16px;
   position: relative;
   display: inline-block;
@@ -348,6 +350,7 @@ li {
 
 #skill .rate:before,
 #skill .rate:after {
+  text-align:center;
   line-height: 20px;
   position: absolute;
   top: 0;
