@@ -1,47 +1,38 @@
-/* CSS Document */
-
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-  color: #333;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+  "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
+  "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 15px;
   line-height: 1.8;
   letter-spacing: .8px;
   word-break: break-all;
+  color: #333;
 }
 
 a {
-  color: #1ca9e3;
   text-decoration: none;
+  color: #1ca9e3;
 }
 
-a:hover,
-a:hover img {
+a img {
+  transition: opacity .3s;
+}
+
+a img:hover {
   opacity: .8;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
 }
 
-img,
-video,
-object {
+img {
   max-width: 100%;
   height: auto;
-  border: none;
-  vertical-align: bottom;
-  display: block;
+  vertical-align: middle;
+  border-style: none;
 }
 
 ul,
@@ -49,600 +40,544 @@ li {
   list-style: none;
 }
 
-/*--------------------------------
-　全体
----------------------------------*/
+.pc-only {
+  display: block;
+}
 
-#wrapper {
+.sp-only {
+  display: none;
+}
+
+/*--------------------------------
+ 文字
+---------------------------------*/
+.heading-primary {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  line-height: 1;
+  display: inline-block;
+  letter-spacing: .2em;
+  text-transform: lowercase;
+  color: #f39ac7;
+}
+
+.section-heading {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-lead {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/*--------------------------------
+ レイアウト
+---------------------------------*/
+.wrapper {
   background-color: #fff;
 }
 
+.section {
+  padding: 120px 0;
+}
+
 .inner {
-  text-align:center;
   max-width: 1320px;
-  width: 100%;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 40px;
 }
 
-#contents {
-  padding: 100px 0;
-}
-
-#start{
-   text-align:center;
+.content {
+  margin-top: 100px;
 }
 
 /*--------------------------------
-　ヘッダー
+ヘッダー
 ---------------------------------*/
-
-#header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.header {
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
   align-items: center;
-  height: 550px;
+  justify-content: center;
+  height: 540px;
 }
 
-#header .logo {
-  display: block;
-}
-
-#header .logo-name {
-  display: block;
-  font-family: 'Amatic SC', cursive;
+.logo-name {
+  font-family: "Amatic SC", cursive;
   font-size: 32px;
   line-height: 1;
+  display: block;
+  margin-bottom: 5px;
   text-align: center;
   color: #757575;
-  margin-bottom: 5px;
 }
 
-#header .logo-title {
-  font-family: 'Cormorant Garamond', serif;
+.logo {
+  text-align: center;
+}
+
+.logo-title {
+  font-family: "Cormorant Garamond", serif;
   font-size: 88px;
   font-weight: normal;
-  color: #f39ac7;
   line-height: 1;
+  display: block;
   letter-spacing: .1em;
+  color: #f39ac7;
 }
 
-#header .logo-desc {
-  font-family: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "游明朝体", "Yu Mincho", YuMincho, "MS P明朝", "MS PMincho", serif;
-  display: block;
+.logo-text {
   font-size: 14px;
-  letter-spacing: .2em;
-  text-align: center;
+  display: block;
   margin-top: 10px;
-
+  text-align: center;
+  letter-spacing: .2em;
 }
 
 /*--------------------------------
-　グローバルナビ
+グローバルナビ
 ---------------------------------*/
-
-#gnav {
+.gnav {
+  z-index: 1;
+  font-family: "Cormorant Garamond", serif;
   padding: 10px;
-  font-family: 'Cormorant Garamond', serif;
-
-  z-index: 100;
 }
 
-#gnav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.gnav-list {
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
-#gnav li {
+.gnav-item {
   padding: 0 30px;
 }
 
-#gnav li a {
-  font-weight: bold;
+.gnav-link {
   font-size: 16px;
-  color: #333;
+  font-weight: bold;
   letter-spacing: .1em;
   text-transform: lowercase;
+  color: #333;
 }
 
-#gnav.fixed {
+/* iOS対策 */
+.ios .gnav-link:hover {
+  opacity: 1;
+}
+
+.gnav.fixed {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2);
   transform: translate3d(0, 0, 0);
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 7px -3px rgba(0, 0, 0, .1);
+  box-shadow: 0 5px 7px -3px rgba(0, 0, 0, .1);
 }
 
 /*--------------------------------
-　Section
+ Feature
 ---------------------------------*/
-
-.section .inner {
-  padding: 80px 10px;
+.feature-section .inner {
+  max-width: 1000px;
 }
 
-.section .section-title-block {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.section .section-title {
-  font-family: 'Cormorant Garamond', serif;
-  text-transform: lowercase;
-  letter-spacing: .2em;
-  display: inline-block;
-  font-size: 36px;
-  line-height: 1;
-  margin-bottom: 10px;
-  color: #f39ac7;
-}
-
-.section .section-desc {
-  text-align: center;
-}
-
-.two-column-wrapper {
-  text-align:center;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.feature-item {
   display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.two-column-image {
-  width: 33%;
+.feature-image-wrapper {
+  flex: 0 0 48%;
+  margin-right: 40px;
 }
 
-.two-column-image img {
-  margin: 0 auto;
+.feature-body {
+  flex: 1;
 }
 
-.two-column-desc {
-  width: 62%;
+.feature-body p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 /*--------------------------------
-　feature
+ Works
 ---------------------------------*/
-
-#feature .two-column-image {
-  width: 48%;
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -40px;
 }
 
-#feature .two-column-desc {
-  width: 48%;
+.works-item {
+  flex: 0 0 32.31552%;
+  margin-right: 1.52671%;
+  margin-bottom: 40px;
 }
 
-/*--------------------------------
-　works
----------------------------------*/
-
-#works .card {
-  width: 32%;
+.works-item:nth-of-type(3n) {
+  margin-right: 0;
 }
 
-#works .card {
-  margin-bottom: 50px;
+.works-body {
+  text-align: center;
 }
 
-#works .card-image {
-  display: block;
-  margin-bottom: 8px;
-}
-
-#works .card-caption-title {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-#works .card-caption-info {
+.works-title {
   font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
 }
 
-#works .card-caption-url {
+.works-text {
   font-size: 10px;
 }
 
-#works .card-wrapper {
-  text-align:center;
-  padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+.works-url {
+  font-size: 10px;
 }
 
 /*--------------------------------
-　about
+ About
 ---------------------------------*/
-#about .ans{
- text-align:center;
+.about-section .inner {
+  max-width: 1000px;
 }
 
-/*--------------------------------
- skill
----------------------------------*/
-
-#skill .card-wrapper {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.about-item {
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-#skill .card {
-  flex-basis: 46%;
+.about-image-wrapper {
+  flex: 0 0 25%;
+  margin-right: 40px;
+}
+
+.about-body {
+  flex: 1;
+}
+
+.about-body p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/*--------------------------------
+ Skill
+---------------------------------*/
+.skill-section .inner {
+  max-width: 1000px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.skill-item {
+  display: flex;
+  flex: 0 0 46%;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
-#skill .card:first-child {
-  flex-basis: 100%;
+.skill-image-wrapper {
+  flex: 0 0 60px;
+  margin-right: 20px;
 }
 
-#skill .skill-icon {
-  flex-basis: 75px;
+.skill-body {
+  flex: 1;
 }
 
-#skill .skill-icon img {
-  width: 75px;
+.skill-body p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
-#skill .skill-desc {
-  text-align:center;
-  flex-basis: calc(100% - 75px - 30px);
-}
-
-#skill .skill-desc-title {
+.skill-title {
   margin-bottom: 3px;
 }
 
-#skill .rate {
-  text-align:center;
-  font-size: 16px;
+.rate {
   position: relative;
+  font-size: 16px;
   display: inline-block;
   width: 100%;
   height: 20px;
   letter-spacing: .3em;
 }
 
-#skill .rate:before,
-#skill .rate:after {
-  text-align:center;
-  line-height: 20px;
+.rate:before,
+.rate:after {
   position: absolute;
   top: 0;
   left: 0;
+  line-height: 20px;
   display: inline-block;
   height: 20px;
   content: "★★★★★";
 }
 
-#skill .rate:before {
+.rate:before {
   color: #ddd;
 }
 
-#skill .rate:after {
+.rate:after {
   overflow: hidden;
   white-space: nowrap;
   color: #f181b4;
 }
 
-#skill .rate1:after {
+.rate1:after {
   width: 20px;
 }
 
-#skill .rate2:after {
+.rate2:after {
   width: 40px;
 }
 
-#skill .rate3:after {
+.rate3:after {
   width: 60px;
 }
 
-#skill .rate4:after {
+.rate4:after {
   width: 80px;
 }
 
-#skill .rate5:after {
+.rate5:after {
   width: 100px;
 }
 
 /*--------------------------------
- contact
+ Contact
 ---------------------------------*/
-
-#contact .contact-list {
-  padding: 20px 0;
-}
-
-#contact .contact-list ul {
-  width: 40%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.contact-list {
   display: flex;
-  -ms-flex-wrap: wrap;
+  align-items: flex-end;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  align-self: flex-end;
-  ;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-#contact .contact-list li {
+.contact-item {
+  width: 100px;
+  margin: 0 20px;
   text-align: center;
 }
 
-#contact .contact-list li a {
+.contact-name {
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
   color: #333;
 }
 
-#contact .contact-list li img {
-  width: 60px;
-  margin: 0 auto 5px;
+.contact-image {
+  width: 50px;
 }
 
-#contact .contact-list-desc {
-  font-size: 12px;
-  font-weight: bold;
+.contact-text {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 /*--------------------------------
  Footer
 ---------------------------------*/
-
-#footer {
+.footer {
   background-color: #333;
 }
 
-#footer .inner {
+.footer .inner {
   padding: 30px;
 }
 
-#footer .footer-link ul {
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: .1em;
-  text-transform: lowercase;
-  margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-}
-
-#footer .footer-link li {
-  font-size: 12px;
-  padding: 0 20px;
-}
-
-#footer .footer-link li a {
-  color: #fff;
-  font-weight: bold;
-}
-
-#footer .copyright {
+.copyright {
   font-size: 10px;
-  color: #8c8c8c;
   text-align: center;
+  color: #8c8c8c;
+}
+
+.page-top {
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #ffe8f4;
 }
 
 /*media Queries 767
 ----------------------------------------------------*/
-
 @media screen and (max-width: 767px) {
   body {
     font-size: 13px;
     line-height: 1.7;
   }
 
-  #header {
-    height: 60vh;
+  .pc-only {
+    display: none;
   }
 
-  #header .logo-title {
-    font-size: 40px;
+  .sp-only {
+    display: block;
   }
 
-  #header .logo-name {
-    font-size: 16px;
-  }
-
-  #header .logo-desc {
-    font-size: 10px;
-  }
-
-  #gnav li {
-    padding: 0 10px;
-  }
-
-  #gnav li a {
-    font-size: 12px;
-  }
-
-  #gnav li a:hover {
-    opacity: 1;
-  }
-
-  #contents {
-    padding: 40px 0;
-  }
-
-  .section .inner {
-    padding: 30px 15px;
-  }
-
-  .section .section-title-block {
-    margin-bottom: 10px;
-  }
-
-  .section .section-title {
+  /* 文字 */
+  .heading-primary {
     font-size: 32px;
   }
 
-  #feature .two-column-wrapper {
-    width: 100%;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  /* レイアウト */
+  .section {
+    padding: 60px 0;
   }
 
-  #feature .two-column-image {
-    width: 90%;
-    margin: 0 auto 20px;
+  .section .inner {
+    padding: 0 15px;
   }
 
-  #feature .two-column-desc {
-    width: 100%;
+  .content {
+    margin-top: 40px;
   }
 
-  #works .card {
-    width: 48%;
+  /* ヘッダー */
+  .header {
+    height: 70vh;
   }
 
-  #works .card-caption-title {
+  .logo-name {
+    font-size: 16px;
+  }
+
+  .logo-title {
+    font-size: 40px;
+  }
+
+  .logo-text {
+    font-size: 10px;
+  }
+
+  /* グローバルナビ */
+  .gnav-list {
+    padding: 0 10px;
+  }
+
+  .gnav-link {
     font-size: 12px;
   }
 
-  #works .card-caption-info {
-    font-size: 11px;
+  .gnav-link:hover {
+    opacity: 1;
   }
 
-  #about .two-column-wrapper {
-    width: 100%;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  /* Feature */
+  .feature-item {
+    display: block;
   }
 
-  #about .two-column-image {
-    width: 50%;
+  .feature-image-wrapper {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Works */
+  .works-body {
+    text-align: left;
+  }
+
+  .works-title {
+    font-size: 10px;
+  }
+
+  .works-list {
+    justify-content: space-between;
+  }
+
+  .works-item {
+    flex: 0 0 48%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  /* About */
+  .about-item {
+    display: block;
+  }
+
+  .about-image-wrapper {
+    width: 100px;
+    max-width: 100%;
     margin: 0 auto 20px;
   }
 
-  #about .two-column-desc {
-    width: 100%;
+  /* Skill */
+  .skill-list {
+    display: block;
+    margin-bottom: 0;
   }
 
-  #skill .card-wrapper {
-    width: 100%;
+  .skill-item {
+    max-width: 100%;
+    margin-bottom: 35px;
   }
 
-  #skill .card {
-    flex-basis: 100%;
+  .skill-item:last-child {
+    margin-bottom: 0;
   }
 
-  #skill .skill-icon {
-    flex-basis: 45px;
+  .skill-image-wrapper {
+    flex: 0 0 75px;
+    margin-right: 15px;
   }
 
-  #skill .skill-icon img {
-    width: 45px;
-  }
-
-  #skill .skill-desc {
-    flex-basis: calc(100% - 45px - 20px);
-  }
-
-  #skill .rate {
-    height: 15px;
+  .rate {
     font-size: 15px;
-  }
-
-  #skill .rate:before,
-  #skill .rate:after {
     height: 15px;
-    line-height: 15px;
   }
 
-  #skill .rate1:after {
+  .rate:before,
+  .rate:after {
+    line-height: 15px;
+    height: 15px;
+  }
+
+  .rate1:after {
     width: 15px;
   }
 
-  #skill .rate2:after {
+  .rate2:after {
     width: 35px;
   }
 
-  #skill .rate3:after {
+  .rate3:after {
     width: 55px;
   }
 
-  #skill .rate4:after {
+  .rate4:after {
     width: 75px;
   }
 
-  #skill .rate5:after {
+  .rate5:after {
     width: 95px;
   }
 
-  #contact .contact-list ul {
-    width: 100%;
+  /* Contact */
+  .contact-item {
+    width: 70px;
   }
 
-  #contact .contact-list li {
-    flex-basis: 30%;
-  }
-
-  #contact .contact-list li img {
-    width: 30px;
-  }
-
-  #contact .contact-list-desc {
-    font-size: 12px;
-  }
-
-  #footer .inner {
+  /* フッター */
+  .footer .inner {
     padding: 20px 0;
-  }
-
-  #footer .footer-link li {
-    font-size: 10px;
-    padding: 0 10px;
-    margin-bottom: 5px;
   }
 }
