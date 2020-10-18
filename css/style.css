@@ -282,7 +282,9 @@ li {
 /*--------------------------------
 　about
 ---------------------------------*/
-
+#about ans{
+ text-align:center;
+}
 #about .two-column-image {
   width: 33%;
 }
