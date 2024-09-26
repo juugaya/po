@@ -1,6 +1,6 @@
 const btn = document.getElementById("button");
-const list = document.getElementById("list");
+const list = document.getElementById("list_1");
 
  btn.addEventListener("click",function(){
- list.classList.toggle("hidden")
+ list_1.classList.toggle("hidden")
 });
