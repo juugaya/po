@@ -39,3 +39,7 @@ footer{
     .inline li {
     	display: inline;
     }
+
+    .hidden {
+  display: none;
+}
