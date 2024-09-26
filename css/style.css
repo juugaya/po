@@ -581,3 +581,8 @@ li {
     padding: 20px 0;
   }
 }
+
+ /* 非表示項目 */
+.hidden {
+  display: none;
+}
