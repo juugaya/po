@@ -37,7 +37,7 @@ img {
 
 ul,
 li {
-  list-style: none;
+  list-style: inline;
 }
 
 .pc-only {
