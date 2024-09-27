@@ -35,18 +35,7 @@ img {
   border-style: none;
 }
 
-ul,
-li {
-  list-style: none;
-}
 
-.pc-only {
-  display: block;
-}
-
-.sp-only {
-  display: none;
-}
 
 /*--------------------------------
  文字
