@@ -35,6 +35,10 @@ img {
   border-style: none;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1cb4138bf999300696adffbd0492b19d49e0e47
 
 /*--------------------------------
  文字
@@ -568,4 +572,9 @@ img {
   .footer .inner {
     padding: 20px 0;
   }
+}
+
+ /* 非表示項目 */
+.hidden {
+  display: none;
 }
