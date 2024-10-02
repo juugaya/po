@@ -41,7 +41,11 @@
 <input type="button" value="エンジニアとしてSESでの簡単な経歴表示" onclick="OnButtonClick()">
   <p id="output_sample"></p>
 
-
+<div id="app_3">
+    <button v-on:click="on">表示</button>
+    <button v-on:click="off">非表示</button>
+    <p v-show="viewFlag">Hello!</p>
+</div>
 
 　　　<table border="2">
     <tbody><tr>
