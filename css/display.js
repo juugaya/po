@@ -14,4 +14,4 @@ const Sample = {
     },
 };
 
-Vue.createApp(Sample).mount("#app_3");
+Vue.createApp(Sample).mount("#app");
