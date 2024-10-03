@@ -43,6 +43,23 @@
     <button @click="toggle">クリック</button>
     <div v-show="show">コンテンツ</div>
 	</div>
+<script>
+	const app = Vue.createApp({
+    data() {
+        return {
+            // デフォルトはfalseにして非表示
+            show: false
+        }
+    },
+    methods: {
+        //クリックしたら表示/非表示する
+        toggle: function () {
+            this.show = !this.show;
+        },
+    }
+});
+app.mount("#app");
+</script>
 
 
 
