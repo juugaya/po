@@ -39,29 +39,36 @@
       }
        </script>
 
-	<div id="app">
-    <button @click="toggle">クリック</button>
-    <div v-show="show">コンテンツ</div>
-	</div>
-<script>
-	const app = Vue.createApp({
-    data() {
-        return {
-            // デフォルトはfalseにして非表示
-            show: false
-        }
-    },
-    methods: {
-        //クリックしたら表示/非表示する
-        toggle: function () {
-            this.show = !this.show;
-        },
+<div id="app">
+  <!-- Vue.jsを使いたい部分 -->
+	<button @click="toggle">クリック</button>
+	<div v-show="show">コンテンツ</div>
+</div>
+<script type="module">
+  import { createApp } from "https://unpkg.com/vue@3.2.4/dist/vue.esm-browser.prod.js";
+  const app = createApp({
+    /* Vue.jsの各種処理 */
+	  const app = Vue.createApp({
+		  data() {
+		        return {
+		            // デフォルトはfalseにして非表示
+		            show: false
+		        }
+		    },
+		    methods: {
+		        //クリックしたら表示/非表示する
+		        toggle: function () {
+		            this.show = !this.show;
+		        },
     }
 });
 app.mount("#app");
+  });
 </script>
 
 
+	
+	
 
 
 	
