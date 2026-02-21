@@ -231,3 +231,46 @@
   font-size: 1.3rem;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: 0.3s;
+  backdrop-filter: blur(8px);
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 234, 255, 0.3);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00eaff;
+  letter-spacing: 0.05em;
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+
