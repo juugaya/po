@@ -290,5 +290,77 @@
 .footer-links a:hover {
   text-shadow: 0 0 8px #00eaff;
 }
+.contact-section {
+  padding: 6rem 2rem;
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.contact-text {
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 234, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00eaff;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
+  outline: none;
+}
+
+.contact-form button {
+  padding: 1rem;
+  background: #00eaff;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #00c7dd;
+}
+
+.contact-links a {
+  margin: 0 1rem;
+  color: #00eaff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  text-shadow: 0 0 8px #00eaff;
+}
 
 
