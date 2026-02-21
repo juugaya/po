@@ -272,5 +272,23 @@
   color: #00eaff;
   text-shadow: 0 0 8px #00eaff;
 }
+.footer {
+  padding: 2rem;
+  background: #0d0d0d;
+  text-align: center;
+  color: #fff;
+  border-top: 1px solid rgba(0, 234, 255, 0.3);
+}
+
+.footer-links a {
+  margin: 0 1rem;
+  color: #00eaff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  text-shadow: 0 0 8px #00eaff;
+}
 
 
