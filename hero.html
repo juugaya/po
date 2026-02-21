@@ -11,6 +11,24 @@
     </nav>
   </div>
 </header>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("open");
+  });
+
+  // メニュークリックで閉じる
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      nav.classList.remove("open");
+    });
+  });
+</script>
+
 
 <section class="hero">
   <div class="hero-content">
