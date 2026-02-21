@@ -363,4 +363,155 @@
   text-shadow: 0 0 8px #00eaff;
 }
 
+/* スマホ向け（〜768px） */
+@media (max-width: 768px) {
+
+  /* セクションの余白を少し縮める */
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  /* セクションタイトル */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* テキスト */
+  body {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-links a {
+    font-size: 1rem;
+    margin: 0 0.7rem;
+  }
+}
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .works-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .work-thumb {
+    height: 160px;
+  }
+}
+@media (max-width: 768px) {
+
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+
+  .timeline-content {
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form {
+    gap: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+
+  .contact-form button {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .nav a {
+    margin-left: 1rem;
+    font-size: 0.95rem;
+  }
+}
+/* --- 基本ヘッダー --- */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 234, 255, 0.3);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #00eaff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* --- PCナビ --- */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+/* --- ハンバーガーアイコン（スマホ用） --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px
 
